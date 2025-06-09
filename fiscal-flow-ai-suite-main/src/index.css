@@ -1,0 +1,224 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Financial Product Design System */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Brand Colors */
+    --primary: 210 73% 19%;  /* Deep Navy #0D2E53 */
+    --primary-foreground: 0 0% 98%;
+    --accent: 192 100% 41%;  /* Accent Cyan #00A5CF */
+    --accent-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 210 73% 19%;
+
+    --radius: 0.5rem;
+
+    /* Navy variants */
+    --navy-50: 210 40% 98%;
+    --navy-100: 210 40% 96%;
+    --navy-200: 210 40% 90%;
+    --navy-300: 210 40% 80%;
+    --navy-400: 210 40% 60%;
+    --navy-500: 210 73% 19%;
+    --navy-600: 210 73% 15%;
+    --navy-700: 210 73% 12%;
+    --navy-800: 210 73% 10%;
+    --navy-900: 210 73% 8%;
+
+    /* Cyan variants */
+    --cyan-50: 192 100% 95%;
+    --cyan-100: 192 100% 90%;
+    --cyan-200: 192 100% 80%;
+    --cyan-300: 192 100% 70%;
+    --cyan-400: 192 100% 60%;
+    --cyan-500: 192 100% 41%;
+    --cyan-600: 192 100% 35%;
+    --cyan-700: 192 100% 30%;
+    --cyan-800: 192 100% 25%;
+    --cyan-900: 192 100% 20%;
+  }
+
+  .dark {
+    --background: 210 73% 8%;
+    --foreground: 210 40% 98%;
+    --card: 210 73% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 210 73% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 192 100% 41%;
+    --primary-foreground: 210 73% 8%;
+    --secondary: 210 73% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 210 73% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 192 100% 41%;
+    --accent-foreground: 210 73% 8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 210 73% 15%;
+    --input: 210 73% 15%;
+    --ring: 192 100% 41%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-navy-cyan {
+    @apply bg-gradient-to-r from-primary to-accent;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .hover-lift {
+    @apply transform transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-lg;
+  }
+
+  .fade-in {
+    @apply animate-[fadeIn_0.6s_ease-out_forwards];
+  }
+
+  .slide-up {
+    @apply animate-[slideUp_0.7s_ease-out_forwards];
+  }
+
+  .feature-card {
+    @apply bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition-all duration-300 ease-out hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200 ease-out hover:shadow-lg;
+  }
+
+  .btn-accent {
+    @apply bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200 ease-out hover:shadow-lg;
+  }
+}
+
+@layer utilities {
+  .text-navy-50 { color: hsl(var(--navy-50)); }
+  .text-navy-100 { color: hsl(var(--navy-100)); }
+  .text-navy-200 { color: hsl(var(--navy-200)); }
+  .text-navy-300 { color: hsl(var(--navy-300)); }
+  .text-navy-400 { color: hsl(var(--navy-400)); }
+  .text-navy-500 { color: hsl(var(--navy-500)); }
+  .text-navy-600 { color: hsl(var(--navy-600)); }
+  .text-navy-700 { color: hsl(var(--navy-700)); }
+  .text-navy-800 { color: hsl(var(--navy-800)); }
+  .text-navy-900 { color: hsl(var(--navy-900)); }
+
+  .bg-navy-50 { background-color: hsl(var(--navy-50)); }
+  .bg-navy-100 { background-color: hsl(var(--navy-100)); }
+  .bg-navy-200 { background-color: hsl(var(--navy-200)); }
+  .bg-navy-300 { background-color: hsl(var(--navy-300)); }
+  .bg-navy-400 { background-color: hsl(var(--navy-400)); }
+  .bg-navy-500 { background-color: hsl(var(--navy-500)); }
+  .bg-navy-600 { background-color: hsl(var(--navy-600)); }
+  .bg-navy-700 { background-color: hsl(var(--navy-700)); }
+  .bg-navy-800 { background-color: hsl(var(--navy-800)); }
+  .bg-navy-900 { background-color: hsl(var(--navy-900)); }
+
+  .text-cyan-50 { color: hsl(var(--cyan-50)); }
+  .text-cyan-100 { color: hsl(var(--cyan-100)); }
+  .text-cyan-200 { color: hsl(var(--cyan-200)); }
+  .text-cyan-300 { color: hsl(var(--cyan-300)); }
+  .text-cyan-400 { color: hsl(var(--cyan-400)); }
+  .text-cyan-500 { color: hsl(var(--cyan-500)); }
+  .text-cyan-600 { color: hsl(var(--cyan-600)); }
+  .text-cyan-700 { color: hsl(var(--cyan-700)); }
+  .text-cyan-800 { color: hsl(var(--cyan-800)); }
+  .text-cyan-900 { color: hsl(var(--cyan-900)); }
+
+  .bg-cyan-50 { background-color: hsl(var(--cyan-50)); }
+  .bg-cyan-100 { background-color: hsl(var(--cyan-100)); }
+  .bg-cyan-200 { background-color: hsl(var(--cyan-200)); }
+  .bg-cyan-300 { background-color: hsl(var(--cyan-300)); }
+  .bg-cyan-400 { background-color: hsl(var(--cyan-400)); }
+  .bg-cyan-500 { background-color: hsl(var(--cyan-500)); }
+  .bg-cyan-600 { background-color: hsl(var(--cyan-600)); }
+  .bg-cyan-700 { background-color: hsl(var(--cyan-700)); }
+  .bg-cyan-800 { background-color: hsl(var(--cyan-800)); }
+  .bg-cyan-900 { background-color: hsl(var(--cyan-900)); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.line-draw {
+  stroke-dasharray: 1000;
+  animation: drawLine 2s ease-out forwards;
+}
