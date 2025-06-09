@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fastapi
 uvicorn
 sqlalchemy
@@ -6,4 +7,14 @@ python-multipart
 pandas
 numpy
 pillow
+=======
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+python-multipart
+pandas
+numpy
+pillow
+>>>>>>> 968c45045fc6699c7c6a43cc961396802e7caec8
 pytesseract 
